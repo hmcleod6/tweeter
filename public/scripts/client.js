@@ -43,7 +43,7 @@ $(() => {
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const newTweet = createTweetElement(tweet);
-      $(".tweetContainer").append(newTweet);
+      $(".tweetContainer").prepend(newTweet);
       console.log("tweet", tweet);
     });
     return;
@@ -62,6 +62,15 @@ const loadNewTweets = function() {
 
   $("#submit-form").on("submit", function (event) {
     event.preventDefault();
+    const characterLength = $('#tweet-text').val().length;
+    if (characterLength > 140) {
+      alert('Your tweet is over 140 characters.')
+    }
+    if (!characterLength) {
+      alert('The text field is empty');
+    }
+
+
     const data = $(this).serialize();
 $('form').trigger('reset');
     $.ajax({
