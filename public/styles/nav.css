@@ -9,18 +9,22 @@ nav {
   align-items: center;
   font-family: 'Bungee';
   justify-content: space-between;
-top: 0;
-z-index: 2;
-position: fixed;
+  top: 0;
+  z-index: 2;
+  position: fixed;
 }
-.new-tweet-text  {
+
+
+.new-tweet-text {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 i.fa-solid.fa-angles-down {
   color: red;
   display: flex;
   justify-content: center;
 }
+
 .Write-a-new-tweet {
   display: flex;
   flex-direction: column;

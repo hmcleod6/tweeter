@@ -5,9 +5,9 @@ $(document).ready(function () {
   $inputForm.on("keyup", function () {
     const lengthOfInput = $(this).val().length;
    
-    const siblings = $(this).siblings();
-    console.log('sibliings:', siblings)
-    const children = $(siblings[1]).children()
+    const sibling = $(this).siblings();
+    console.log('sibliings:', sibling)
+    const children = $(sibling[1]).children()
     console.log('children:', children)
     const counter = $(children[1]);
     console.log('counter:', counter)
